@@ -36,13 +36,13 @@ function darkAdmin_register_admin_color_scheme() {
 	wp_admin_css_color(
 		'darkadmin',
 		__( 'DarkAdmin' ),
-		plugins_url( 'css/colors-mp6.css', __FILE__ ),
+		plugins_url( 'css/colors-darkadmin.css', __FILE__ ),
 		array( '#222', '#333', '#0074a2', '#2ea2cc' )
 	);
 	$_wp_admin_css_colors[ 'darkadmin' ]->icon_colors = array( 'base' => '#999', 'focus' => '#2ea2cc', 'current' => '#fff' );
 
 	// set modification time
-	$wp_styles->registered[ 'colors' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/colors-mp6.css' );
+	$wp_styles->registered[ 'colors' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/colors-darkadmin.css' );
 
 	// set dependencies
 	$wp_styles->registered[ 'colors' ]->deps[] = 'open-sans';
@@ -60,8 +60,8 @@ function darkAdmin_fix_login_color_scheme() {
 
 	global $wp_styles;
 
-	$wp_styles->registered[ 'colors-fresh' ]->src = plugins_url( 'css/colors-mp6.css', __FILE__ );
-	$wp_styles->registered[ 'colors-fresh' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/colors-mp6.css' );
+	$wp_styles->registered[ 'colors-fresh' ]->src = plugins_url( 'css/colors-darkadmin.css', __FILE__ );
+	$wp_styles->registered[ 'colors-fresh' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/colors-darkadmin.css' );
 	$wp_styles->registered[ 'colors-fresh' ]->deps[] = 'open-sans';
 	$wp_styles->registered[ 'colors-fresh' ]->deps[] = 'dashicons';
 
@@ -142,7 +142,7 @@ function darkAdmin_force_admin_color( $color_scheme ) {
 
         global $_wp_admin_css_colors;
 
-        // if setting is `fresh`, `classic` or doesn't exist, change it to `mp6`
+        // if setting is `fresh`, `classic` or doesn't exist, change it to `darkadmin`
         if ( ! isset( $_wp_admin_css_colors[ $color_scheme ] ) ) {
                 $color_scheme = 'darkadmin';
         }
