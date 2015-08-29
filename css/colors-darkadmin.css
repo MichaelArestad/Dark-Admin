@@ -1,0 +1,78 @@
+/*------------------------------------------------------------------------------
+
+Last merged revision: 24761
+
+Howdy! This is the CSS file that controls the
+Dark Admin color style on the WordPress Dashboard.
+
+This file contains both LTR and RTL styles.
+
+
+TABLE OF CONTENTS:
+------------------
+ 1.0 - Left to Right Styles
+ 2.0 - Right to Left Styles
+
+
+------------------------------------------------------------------------------*/
+
+/* Jetpack is retina-crazy. Their backgrounds are declared with !importants,
+   so we have to use the .darkadmin body class to trump their selectors.  */
+
+@media print,
+(-o-min-device-pixel-ratio: 5/4),
+(-webkit-min-device-pixel-ratio: 1.25),
+(min-resolution: 120dpi) {
+  .darkadmin .curtime #timestamp,
+  .darkadmin #screen-meta-links a.show-settings,
+  .darkadmin .widget-top a.widget-action,
+  .darkadmin .widget-top a.widget-action:hover,
+  .darkadmin .sidebar-name-arrow,
+  .darkadmin .sidebar-name:hover .sidebar-name-arrow,
+  .darkadmin .meta-box-sortables .postbox:hover .handlediv,
+  .darkadmin .tagchecklist span a,
+  .darkadmin #bulk-titles div a,
+  .darkadmin .tagchecklist span a:hover,
+  .darkadmin #bulk-titles div a:hover,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_undo,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_redo,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_bullist,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_numlist,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_blockquote,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_charmap,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_bold,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_italic,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_underline,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_justifyleft,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_justifyright,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_justifycenter,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_justifyfull,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_indent,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_outdent,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_link,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_unlink,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_help,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_removeformat,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_fullscreen,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_wp_fullscreen,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_media,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_pastetext,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_pasteword,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_wp_help,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_wp_adv,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_wp_more,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_strikethrough,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_spellchecker,
+  .darkadmin .wp_themeSkin .mceToolbar span.mce_forecolor,
+  .darkadmin .wp_themeSkin .mceToolbar .mce_forecolorpicker,
+  .darkadmin .wp_themeSkin .mceToolbar .mceSplitButton .mce_spellchecker span.mce_spellchecker,
+  .darkadmin .wp_themeSkin .mceToolbar .mceSplitButton .mce_forecolor span.mce_forecolor,
+  .darkadmin .wp_themeSkin .mceToolbar .mceSplitButton span.mce_numlist,
+  .darkadmin .wp_themeSkin .mceToolbar .mceSplitButton span.mce_bullist
+  { background: none !important; }
+}
+
+
+/*------------------------------------------------------------------------------
+  1.0 - Left to Right Styles
+------------------------------------------------------------------------------*/
