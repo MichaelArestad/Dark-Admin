@@ -19,7 +19,7 @@ if ( ! defined( 'darkAdmin' ) )
 
 // register Open Sans stylesheet
 add_action( 'init', 'darkAdmin_register_open_sans' );
-function mp6_register_open_sans() {
+function darkAdmin_register_open_sans() {
 	wp_register_style(
 		'open-sans',
 		'//fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600&subset=latin-ext,latin',
@@ -30,18 +30,16 @@ function mp6_register_open_sans() {
 }
 
 // register Dark Admin admin color scheme
-add_action( 'admin_init', 'darkAdmin_register_admin_color_scheme', 5 );
 function darkAdmin_register_admin_color_scheme() {
 
 	global $wp_styles, $_wp_admin_css_colors;
-
 	wp_admin_css_color(
 		'darkadmin',
-		'DarkAdmin',
+		__( 'DarkAdmin' ),
 		plugins_url( 'css/colors-mp6.css', __FILE__ ),
 		array( '#222', '#333', '#0074a2', '#2ea2cc' )
 	);
-	$_wp_admin_css_colors[ 'darkAdmin' ]->icon_colors = array( 'base' => '#999', 'focus' => '#2ea2cc', 'current' => '#fff' );
+	$_wp_admin_css_colors[ 'darkadmin' ]->icon_colors = array( 'base' => '#999', 'focus' => '#2ea2cc', 'current' => '#fff' );
 
 	// set modification time
 	$wp_styles->registered[ 'colors' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/colors-mp6.css' );
@@ -51,10 +49,10 @@ function darkAdmin_register_admin_color_scheme() {
 	$wp_styles->registered[ 'colors' ]->deps[] = 'dashicons';
 
 }
+remove_action( 'admin_init', 'register_admin_color_schemes', 1);
+add_action( 'admin_init', 'darkAdmin_register_admin_color_scheme' );
 
 // remove WP's default color schemes
-remove_action( 'admin_init', 'register_admin_color_schemes', 1);
-
 // load Dark Admin css on login screen
 add_action( 'login_init', 'darkAdmin_replace_wp_default_styles' );
 add_action( 'login_init', 'darkAdmin_fix_login_color_scheme' );
@@ -91,7 +89,6 @@ add_action( 'admin_init', 'darkAdmin_replace_wp_default_styles' );
 function darkAdmin_replace_wp_default_styles() {
 
 	global $wp_styles;
-
 	$wp_styles->registered[ 'buttons' ]->src = plugins_url( 'css/buttons.css', __FILE__ );
 	$wp_styles->registered[ 'buttons' ]->ver = filemtime( plugin_dir_path( __FILE__ ) . 'css/buttons.css' );
 	$wp_styles->registered[ 'editor-buttons' ]->src = plugins_url( 'css/editor.css', __FILE__ );
@@ -139,6 +136,21 @@ function darkAdmin_fix_style_tag_href( $handle ) {
 	return $handle;
 
 }
+
+add_filter( 'get_user_option_admin_color', 'darkAdmin_force_admin_color' );
+function darkAdmin_force_admin_color( $color_scheme ) {
+
+        global $_wp_admin_css_colors;
+
+        // if setting is `fresh`, `classic` or doesn't exist, change it to `mp6`
+        if ( ! isset( $_wp_admin_css_colors[ $color_scheme ] ) ) {
+                $color_scheme = 'darkadmin';
+        }
+
+        return $color_scheme;
+
+}
+
 // Add an `dark-admin` body class to the front-end
 add_filter( 'body_class', 'darkAdmin_add_body_class_frontend' );
 function darkAdmin_add_body_class_frontend( $classes ) {
