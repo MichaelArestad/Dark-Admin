@@ -48,7 +48,7 @@ class DarkAdmin {
 		wp_admin_css_color(
 			'darkadmin',
 			__( 'DarkAdmin' ),
-			plugins_url( 'css/colors-mp6.css', __FILE__ ),
+			plugins_url( 'css/colors-darkadmin.css', __FILE__ ),
 			array( '#222', '#333', '#0074a2', '#2ea2cc' )
 		);
 		$_wp_admin_css_colors['darkadmin']->icon_colors = array( 'base' => '#999', 'focus' => '#2ea2cc', 'current' => '#fff' );
