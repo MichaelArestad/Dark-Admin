@@ -173,7 +173,7 @@ function darkAdmin_add_body_class_backend( $classes ) {
 }
 
 // override WP's default toolbar top margin
-add_action( 'wp_head', 'dark-admin_override_toolbar_margin', 11 );
+add_action( 'wp_head', 'darkAdmin_override_toolbar_margin', 11 );
 function darkAdmin_override_toolbar_margin() {
 	if ( is_admin_bar_showing() ) : ?>
 <style type="text/css" media="screen">
