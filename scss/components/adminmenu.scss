@@ -2,10 +2,18 @@
 // Admin Menu (sidebar)
 // ==========================================================================
 
-#adminmenu { // UGH. Dang IDs!
-	float: left;
+#adminmenuwrap {
+	position: absolute;
+	top: 0;
+	bottom: 0;
 	width: 200px;
 	background: $gray--dark;
+}
+
+#adminmenu { // UGH. Dang IDs!
+	float: left;
+	margin-top: 52px;
+	width: 200px;
 
 	a {
 		display: block;
@@ -18,12 +26,63 @@
 			color: $blue--light;
 		}
 	}
-	.current {
+	.wp-has-current-submenu {
 		box-shadow: inset 8px 0 0 $blue--light;
 		color: $blue--light;
+	}
+	.current a {
+		color: #fff;
 	}
 }
 
 .wp-submenu-head {
 	display: none;
+}
+
+.wp-menu-image {
+	float: left;
+	width: 20px;
+}
+
+.wp-menu-name {
+	margin-left: 36px; // 20px + 16px
+}
+
+
+.wp-submenu {
+	display: none;
+	margin-bottom: 8px;
+	background: #2f3740;
+	box-shadow: inset 8px 0 0 #3F4C5A; // TODO make less arbitrary
+
+	.wp-menu-open + & {
+		display: block;
+	}
+}
+
+// Counters
+.update-plugins,
+.awaiting-mod {
+	margin-left: 8px;
+
+	&.count-0 {
+		display: none;
+	}
+}
+
+
+// Specific menu item styles
+#menu-dashboard {
+	.wp-submenu {
+		display: none;
+	}
+}
+
+#menu-appearance {
+	margin-top: 32px;
+}
+
+// TODO temporary?
+#collapse-menu {
+	display: none
 }

@@ -20,7 +20,13 @@
 }
 
 // TODO temporary fix
-#wpbody-content {
+#wpbody,
+#wpfooter {
 	margin-left: 200px;
 	padding: 48px;
+}
+
+#wpwrap {
+	position: relative;
+	min-height: 100vh;
 }
