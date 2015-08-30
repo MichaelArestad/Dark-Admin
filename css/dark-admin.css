@@ -76,4 +76,12 @@ a:hover, a:active, a:focus { -webkit-background-size: 2px 6px; background-size: 
 
 #collapse-menu { display: none; }
 
+#contextual-help-wrap { display: none; }
+
+#contextual-help-link { float: right; }
+
+#screen-options-wrap { display: none; }
+
+#show-settings-link { float: right; }
+
 /*# sourceMappingURL=dark-admin.css.map */
