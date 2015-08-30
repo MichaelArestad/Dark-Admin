@@ -74,7 +74,7 @@ class DarkAdmin {
 		if ( ! isset( $wp_styles->registered['admin-bar'] ) ) {
 			return;
 		}
-		$this->replace_css( 'admin-bar', 'admin-bar.css', '' );
+		$this->replace_css( 'admin-bar', '', '' );
 	}
 
 	public function mce_init( $mce_init ) {

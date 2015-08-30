@@ -1,0 +1,30 @@
+// ==========================================================================
+// Screen reader shortcut
+// Shortcut meant only for screen readers
+// ==========================================================================
+
+@mixin screen-reader-shortcut() {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+
+	&:hover,
+	&:active,
+	&:focus {
+		display: block;
+		clip: auto !important;
+		top: 10px;
+		left: 10px;
+		padding: 8px 16px;
+		border-radius: 6px;
+		border: 1px solid #7B8895;
+		border-bottom-width: 2px;
+		box-shadow: 0 0 0 3px $blue--light;
+		background: #fff;
+		outline: none;
+		color: $blue;
+		font-size: 14px;
+		font-weight: 400;
+		text-decoration: none;
+		z-index: 100000; // Above WP toolbar
+	}
+}
