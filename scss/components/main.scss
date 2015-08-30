@@ -1,0 +1,65 @@
+// ==========================================================================
+// Main
+// ==========================================================================
+
+// TODO Properly import font so various character sets can be used
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600,700,300italic,600italic);
+
+.dark-admin {
+	background: #fff;
+	color: $text;
+	font-family: 'Source Sans Pro', sans-serif; // TODO break out when base styles or typography component(s) are created
+	font-weight: 300;
+	font-size: em( 14px, 16px );
+	line-height: 1.5;
+}
+
+.index-php {
+	background: $gray--dark;
+	color: $gray--light;
+}
+
+// TODO break out into own component
+a {
+	@include slim-underline( $blue--light );
+
+	color: $blue--light;
+	text-decoration: none;
+}
+
+// TODO break into own component
+#adminmenu { // UGH. Using an ID is bad. I suspect this will be common.
+	float: left;
+	width: 200px;
+	background: $gray--dark;
+
+	a {
+		display: block;
+		padding: 6px 16px;
+		color: $gray--light;
+		background: none;
+
+		&:focus,
+		&:hover {
+			color: $blue--light;
+		}
+	}
+	.current {
+		box-shadow: inset 8px 0 0 $blue--light;
+		color: $blue--light;
+	}
+}
+
+.wp-submenu-head {
+	display: none;
+}
+
+// TODO temporary
+.media-frame {
+	display: none;
+}
+
+#wpbody-content {
+	margin-left: 200px;
+	padding: 48px;
+}

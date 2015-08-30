@@ -2,6 +2,7 @@
 Dark Admin :)
 */
 /* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,200,600,700,300italic,600italic);
 *, *:before, *:after { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
@@ -27,6 +28,28 @@ table { border-collapse: collapse; border-spacing: 0; }
 
 .clear:after { clear: both; }
 
-body { background: red !important; }
+.dark-admin { background: #fff; color: #3f5e6d; font-family: 'Source Sans Pro', sans-serif; font-weight: 300; font-size: 0.875em; line-height: 1.5; }
+
+.index-php { background: #23282d; color: #bdc8d3; }
+
+a { text-decoration: none; background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#4ac2ff)); background-image: -webkit-linear-gradient(top, transparent 75%, #4ac2ff 50%); background-image: linear-gradient(to bottom, transparent 75%, #4ac2ff 50%); background-repeat: repeat-x; -webkit-background-size: 2px 2px; background-size: 2px 2px; background-position: 0 1.125em; color: #4ac2ff; text-decoration: none; }
+
+a:hover, a:active, a:focus { -webkit-background-size: 2px 6px; background-size: 2px 6px; background-position: 0 0.875em; }
+
+@media not all, only screen and (min-resolution: 2dppx), only screen and (-webkit-min-device-pixel-ratio: 2) { a { background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#4ac2ff)); background-image: -webkit-linear-gradient(top, transparent 75%, #4ac2ff 75%); background-image: linear-gradient(to bottom, transparent 75%, #4ac2ff 75%); background-repeat: repeat-x; } }
+
+#adminmenu { float: left; width: 200px; background: #23282d; }
+
+#adminmenu a { display: block; padding: 6px 16px; color: #bdc8d3; background: none; }
+
+#adminmenu a:focus, #adminmenu a:hover { color: #4ac2ff; }
+
+#adminmenu .current { -webkit-box-shadow: inset 8px 0 0 #4ac2ff; box-shadow: inset 8px 0 0 #4ac2ff; color: #4ac2ff; }
+
+.wp-submenu-head { display: none; }
+
+.media-frame { display: none; }
+
+#wpbody-content { margin-left: 200px; padding: 48px; }
 
 /*# sourceMappingURL=dark-admin.css.map */

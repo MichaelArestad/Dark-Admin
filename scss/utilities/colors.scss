@@ -3,12 +3,15 @@
 // ==========================================================================
 
 // ==========================================================================
-// Default WP admin colors
+// Dark Admin colors
 // ==========================================================================
-$gray--ultralight: #f1f1f1; // background gray
-$gray--light: #e5e5e5; // borders and hrs
-$gray--middle: #727272; // blockquote
-$gray--dark: #222; // admin bar
+$gray--ultralight: #efe6ed;
+$gray--light: #bdc8d3;
+$gray--dark: #23282d;
 
-$blue--light: #2ea2cc; // highlight color
-$blue--dark: #0074a2; // highlight color
+$blue--light: #4ac2ff;
+$blue: #009fd4;
+
+$text: #3f5e6d;
+
+$red: #ff4373;
