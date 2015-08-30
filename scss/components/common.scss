@@ -1,0 +1,11 @@
+// ==========================================================================
+// Common
+// ==========================================================================
+
+// TODO break out into own component
+a {
+	@include slim-underline( $blue--light );
+
+	color: $blue--light;
+	text-decoration: none;
+}

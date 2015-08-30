@@ -14,51 +14,12 @@
 	line-height: 1.5;
 }
 
-.index-php {
-	background: $gray--dark;
-	color: $gray--light;
-}
-
-// TODO break out into own component
-a {
-	@include slim-underline( $blue--light );
-
-	color: $blue--light;
-	text-decoration: none;
-}
-
-// TODO break into own component
-#adminmenu { // UGH. Using an ID is bad. I suspect this will be common.
-	float: left;
-	width: 200px;
-	background: $gray--dark;
-
-	a {
-		display: block;
-		padding: 6px 16px;
-		color: $gray--light;
-		background: none;
-
-		&:focus,
-		&:hover {
-			color: $blue--light;
-		}
-	}
-	.current {
-		box-shadow: inset 8px 0 0 $blue--light;
-		color: $blue--light;
-	}
-}
-
-.wp-submenu-head {
-	display: none;
-}
-
 // TODO temporary
 .media-frame {
 	display: none;
 }
 
+// TODO temporary fix
 #wpbody-content {
 	margin-left: 200px;
 	padding: 48px;
