@@ -20,9 +20,9 @@ blockquote:before, blockquote:after, q:before, q:after { content: ''; content: n
 
 table { border-collapse: collapse; border-spacing: 0; }
 
-.screen-reader-text { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
+.screen-reader-shortcut { clip: rect(1px, 1px, 1px, 1px); position: absolute !important; }
 
-.screen-reader-text:hover, .screen-reader-text:active, .screen-reader-text:focus { background-color: #f1f1f1; border-radius: 3px; -webkit-box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6); clip: auto !important; color: #21759b; display: block; font-size: 14px; font-weight: bold; height: auto; left: 5px; line-height: normal; padding: 15px 23px 14px; text-decoration: none; top: 5px; width: auto; z-index: 100000; }
+.screen-reader-shortcut:hover, .screen-reader-shortcut:active, .screen-reader-shortcut:focus { display: block; clip: auto !important; top: 10px; left: 10px; padding: 8px 16px; border-radius: 6px; border: 1px solid #7B8895; border-bottom-width: 2px; -webkit-box-shadow: 0 0 0 3px #4ac2ff; box-shadow: 0 0 0 3px #4ac2ff; background: #fff; outline: none; color: #009fd4; font-size: 14px; font-weight: 400; text-decoration: none; z-index: 100000; }
 
 .clear:before, .clear:after { content: ""; display: table; }
 
@@ -38,18 +38,42 @@ a:hover, a:active, a:focus { -webkit-background-size: 2px 6px; background-size: 
 
 .media-frame { display: none; }
 
-#wpbody-content { margin-left: 200px; padding: 48px; }
+#wpbody, #wpfooter { margin-left: 200px; padding: 48px; }
+
+#wpwrap { position: relative; min-height: 100vh; }
 
 .index-php { background: #23282d; color: #bdc8d3; }
 
-#adminmenu { float: left; width: 200px; background: #23282d; }
+#adminmenuwrap { position: absolute; top: 0; bottom: 0; width: 200px; background: #23282d; }
+
+#adminmenu { float: left; margin-top: 52px; width: 200px; }
 
 #adminmenu a { display: block; padding: 6px 16px; color: #bdc8d3; background: none; }
 
 #adminmenu a:focus, #adminmenu a:hover { color: #4ac2ff; }
 
-#adminmenu .current { -webkit-box-shadow: inset 8px 0 0 #4ac2ff; box-shadow: inset 8px 0 0 #4ac2ff; color: #4ac2ff; }
+#adminmenu .wp-has-current-submenu { -webkit-box-shadow: inset 8px 0 0 #4ac2ff; box-shadow: inset 8px 0 0 #4ac2ff; color: #4ac2ff; }
+
+#adminmenu .current a { color: #fff; }
 
 .wp-submenu-head { display: none; }
+
+.wp-menu-image { float: left; width: 20px; }
+
+.wp-menu-name { margin-left: 36px; }
+
+.wp-submenu { display: none; margin-bottom: 8px; background: #2f3740; -webkit-box-shadow: inset 8px 0 0 #3F4C5A; box-shadow: inset 8px 0 0 #3F4C5A; }
+
+.wp-menu-open + .wp-submenu { display: block; }
+
+.update-plugins, .awaiting-mod { margin-left: 8px; }
+
+.update-plugins.count-0, .awaiting-mod.count-0 { display: none; }
+
+#menu-dashboard .wp-submenu { display: none; }
+
+#menu-appearance { margin-top: 32px; }
+
+#collapse-menu { display: none; }
 
 /*# sourceMappingURL=dark-admin.css.map */
